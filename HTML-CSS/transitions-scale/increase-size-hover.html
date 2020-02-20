@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Size on hover</title>
+    <style>
+        .container {
+            background: silver;
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+        }
+        .content {
+            height: 200px;
+            width: 200px;
+            margin:auto;
+            background: rosybrown;
+            border-radius: 50%;
+        }
+        .content:hover {
+            transition: ease-in 0.5s;
+            transform: scale(3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content"></div>
+    </div>
+</body>
+</html>

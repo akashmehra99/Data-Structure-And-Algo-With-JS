@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Box</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 500px;
+            background: black;
+            display: grid;
+        }
+        .content {
+            height: 200px;
+            width: 200px;
+            background: white;
+            margin: auto;
+        }
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            width: 500px;
+            background: blue;
+        }
+        .flex-content {
+            height: 200px;
+            width: 200px;
+            background: yellow;
+            margin: auto;
+        }
+        .trans-container {
+            height: 500px;
+            width: 500px;
+            background: red;
+            position: relative;
+        }
+        .trans-content {
+            height: 200px;
+            width: 200px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>With Grid</h1>
+    <div class="container">
+        <div class="content"></div>
+    </div>
+    <h1>With Flex</h1>
+    <div class="flex-container">
+        <div class="flex-content"></div>
+    </div>
+    <h1>With Transform</h1>
+    <div class="trans-container">
+        <div class="trans-content"></div>
+    </div>
+</body>
+</html>
