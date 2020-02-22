@@ -1,0 +1,29 @@
+.item1 {
+    height: 200px;
+    background: red;
+    flex-grow: 1;
+    order: 1;
+}
+.item2 {
+    height: 200px;
+    flex-grow: 1;
+    background: yellow;
+    order: 2;
+}
+.item3 {
+    height: 200px;
+    flex-grow: 1;
+    background: greenyellow;
+    order: 3;
+}
+.item4 {
+    height: 200px;
+    flex-grow: 1;
+    background: orange;
+    order: 4;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
