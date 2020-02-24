@@ -41,4 +41,42 @@ class BST {
             }
         }
     }
+
+    inOrder(node) {
+        if (!(node === null)) {
+            this.inOrder(node.left);
+            console.log(node.show());
+            this.inOrder(node.right);
+        }
+    }
+
+    preOrder(node) {
+        if (!(node === null)) {
+            console.log(node.show());
+            this.preOrder(node.left);
+            this.preOrder(node.right);
+        }
+    }
+
+    postOrder(node) {
+        if (!(node === null)) {
+            this.postOrder(node.left);
+            this.postOrder(node.right);
+            console.log(node.show());
+        }
+    }
 }
+
+
+let nums = new BST();
+
+nums.insert(23);
+nums.insert(45);
+nums.insert(16);
+nums.insert(37);
+nums.insert(3);
+nums.insert(99);
+nums.insert(22);
+console.log('Post Order transversal');
+
+nums.postOrder(nums.root);
