@@ -65,6 +65,70 @@ class BST {
             console.log(node.show());
         }
     }
+
+    getMinimum() {
+        let min = this.root;
+        while (!(min.left === null)) {
+            min = min.left;
+        }
+        return  min.data;
+    }
+
+    getMaximum() {
+        let max = this.root;
+        while (!(max.right === null)) {
+            max = max.right;
+        }
+        return max.data;
+    }
+
+    find(value) {
+        let current = this.root;
+        while (current.data !== value) {
+            if (value < current.data) {
+                current = current.left;
+            } else {
+                current = current.right;
+            }
+            if (current === null) {
+                return null;
+            }
+        }
+        return current;
+    }
+
+    remove(data) {
+        root = this.removeNode(this.root, data);
+    }
+
+    removeNode(node, data) {
+        if (node === null) {
+            return null;
+        }
+        if (data === node.data) {
+            // node has no children
+            if (node.left === null && node.right === null) {
+                return null;
+            }
+            // if node has no left child
+            if (node.left === null) {
+                return node.right;
+            }
+            // if node has no right child
+            if (node.right === null) {
+                return node.left;
+            }
+            let tempNode = this.getMinimum(node.right);
+            node.data = tempNode.data;
+            node.right = this.removeNode(node.right, data);
+        } else if (data < node.data) {
+            node.left = this.removeNode(node.left, data);
+            return node;
+        } else {
+            node.right = this.removeNode(node.right, data);
+            return node;
+        }
+    }
 }
 
 
@@ -77,6 +141,7 @@ nums.insert(37);
 nums.insert(3);
 nums.insert(99);
 nums.insert(22);
-console.log('Post Order transversal');
-
-nums.postOrder(nums.root);
+console.log('Minimum value in tree -> ', nums.getMinimum());
+console.log('Maximim value in tree -> ', nums.getMaximum());
+console.log('Find value 16 in tree -> ', nums.find(16) ? 'Value exists': 'Value not found');
+console.log('Find value 44 in tree -> ', nums.find(44) ? 'Value exists': 'Value not found');
