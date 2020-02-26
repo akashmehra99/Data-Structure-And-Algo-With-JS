@@ -14,6 +14,14 @@ let obj1 = {
 
 console.log('obj1 :', obj1.fullName()); // Akash Mehra
 
+let obj3 = {
+    fname: 'Akash',
+    lname: 'Mehra',
+    fullName: function () {  return `${this.fname} ${this.lname}` }
+};
+
+console.log('obj3 :', obj3.fullName()); // Akash Mehra
+
 console.log('Creating Singleton Object in ES5');
 
 const singleton = (function() {

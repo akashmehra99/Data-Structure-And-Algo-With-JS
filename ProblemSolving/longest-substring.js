@@ -59,8 +59,8 @@ var lengthOfLongestSubstring = function(s) {
 }; 
 
 let input = 'google.com';
-console.log('google.com -> ', longestSubstring(input));
+console.log('google.com -> ', lengthOfLongestSubstring(input));
 input = 'example.com';
-console.log('example.com -> ', longestSubstring(input));
+console.log('example.com -> ', lengthOfLongestSubstring(input));
 input = 'aaaaaaabbbb';
 console.log('aaaaaaa -> ', lengthOfLongestSubstring(input));
