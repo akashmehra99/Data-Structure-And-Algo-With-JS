@@ -13,9 +13,9 @@ function isAnagram(str1, str2) {
     let len = str1.length;
     for (let i = 0; i < len; i++) {
         sum1 += str1.charCodeAt(i);
-        sum2 += str1.charCodeAt(i);
+        sum2 += str2.charCodeAt(i);
         product1 *= str1.charCodeAt(i);
-        product2 *= str1.charCodeAt(i);
+        product2 *= str2.charCodeAt(i);
     }
     if ((sum1 === sum2) && (product1 === product2)) {
         return true;
