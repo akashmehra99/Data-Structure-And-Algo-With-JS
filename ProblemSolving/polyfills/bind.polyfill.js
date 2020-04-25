@@ -14,3 +14,12 @@ if (!Function.prototype.bind) {
         }
     })();
 }
+
+const myBind = function() {
+    let context = this,
+      funcBindObj = arguments[0];
+    let params = arguments.slice(1);
+    return function(...args) {
+      context.apply(funcBindObj, [...params, ...args]);
+    };
+  };
