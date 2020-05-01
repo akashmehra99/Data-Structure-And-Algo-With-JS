@@ -49,7 +49,7 @@ function applyOperation(b, a = 0, op) {
       return a * b;
     case "/":
       if (b == 0) {
-        throw new UnsupportedOperationException("Cannot divide by zero");
+        throw new Error("Cannot divide by zero");
       }
       return a / b;
   }
@@ -74,3 +74,5 @@ console.log(evaluateString("10 + 2 * 6"));
 console.log(evaluateString("100 * 2 + 12"));
 console.log(evaluateString("100 * ( 2 + 12 )"));
 console.log(evaluateString("100 * ( 2 + 12 ) / 14"));
+
+console.log(evaluateString("100 * ( 2 + 12 ) / 0"));
