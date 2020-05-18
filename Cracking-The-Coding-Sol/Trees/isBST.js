@@ -9,18 +9,20 @@ class Node {
 }
 
 function isBst(root, prev) {
-    if (root) {
-        if (!isBst(root.left, prev)) {
-            return false;
-        }
-        if (root.data <= prev) {
-            return false;
-        }
-        prev = root.data;
-        return isBst(root.right, prev);
-    }
-    return true;
+    return helper(root, null, null);
 }
+
+function helper(node, lower, upper) {
+    if (node == null) return true;
+
+    let val = node.val;
+    if (lower != null && val <= lower) return false;
+    if (upper != null && val >= upper) return false;
+
+    if (! helper(node.right, val, upper)) return false;
+    if (! helper(node.left, lower, val)) return false;
+    return true;
+  }
 
 let root = new Node(5);
 root.left = new Node(2);
