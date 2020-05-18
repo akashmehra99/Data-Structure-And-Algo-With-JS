@@ -8,3 +8,16 @@ function outer() {
 }
 
 outer();
+
+
+function outer (a) {
+    function inner (c) {
+        return console.log(a, c);
+    }
+    return inner;
+}
+
+let b = outer(a);
+console.log('b() ->', b(c));
+
+var c = 15;
