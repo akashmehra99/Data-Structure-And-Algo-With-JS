@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>JS</title>
+  </head>
+  <body>
+    <header>
+      <input type="text" name="search" id="search" placeholder="Search" />
+      <div id="clear">&times;</div>
+    </header>
+    <section class="seachResults">
+      <h3>Search Results</h3>
+      <div class="filterContainer">
+        <select name="type" id="type">
+          <option value="Type">Type</option>
+          <option value="Post">Post</option>
+          <option value="Reply">Reply</option>
+        </select>
+        <button name="searchByUser" id="searchByUser">From</button>
+        <select name="date" id="date">
+          <option value="Date">Date</option>
+          <option value="Today">Today</option>
+          <option value="Yesterday">Yesterday</option>
+        </select>
+      </div>
+    </section>
+    <section class="resultsSection" id="resultsSection"></section>
+    <section class="pagination">
+      <button id="prev">&lt;</button>
+      <div class="no" id="pageNo"></div>
+      <button id="next">&gt;</button>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
