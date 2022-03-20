@@ -9,8 +9,8 @@ let sumOfDigits = {};
 
 const getSquareOfNumber = (number) => {
     let sumOfSquares = 0;
-    while(number > 0) {
-        const digit = number % 10; 
+    while (number > 0) {
+        const digit = number % 10;
         number = parseInt((number / 10), 10);
         sumOfSquares = sumOfSquares + (digit * digit);
     }
@@ -26,4 +26,5 @@ const getSquareOfNumber = (number) => {
     }
 };
 const number = 19;
+// 1 + 81 = 82, 64 + 4 = 68, 36 + 64 = 100, 1
 console.log(number, ' - result for happy number :', getSquareOfNumber(number));
